@@ -1,11 +1,23 @@
+# ROULETTE
+def roulette():
+    return "You chose the Roulette."
+
+# SLOTS
+def slots():
+    return "You chose the Slots."
+
+# RUBBELKARTEN
+def rubbelkarten():
+    return "You chose the Rubberkarten."
+
 # SWITCH
 def switch(option):
     if option == "1":
-        return "You chose the Roulette."
+        return roulette()
     elif option == "2":
-        return "You chose the Slots."
+        return slots()
     elif option == "3":
-        return "You chose the Rubbelkarten"
+        return rubbelkarten()
     else:
         return "Invalid option."
 
