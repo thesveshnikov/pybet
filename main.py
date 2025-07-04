@@ -1,7 +1,12 @@
+import random
+
 # ROULETTE
 def roulette():
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     chosen_number = None
+
+    # DRAW A NUMBER
+    random_number = random.randint(1, 10)
 
     def number_loop_condition():
         nonlocal chosen_number
@@ -21,7 +26,10 @@ def roulette():
     while condition:
         condition = number_loop_condition()
 
-    return f"You chose the Roulette. Number: {chosen_number}"
+    if random_number == chosen_number:
+        return "YOU WIN!"
+    else:
+        return "YOU LOST!"
 
 # SLOTS
 def slots():
