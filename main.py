@@ -1,7 +1,9 @@
 # ROULETTE
 def roulette():
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    return f"You chose the Roulette. Number test: {numbers[0]}"
+
+    number = input("Choose a number 1-10: ")
+    return f"You chose the Roulette. Number: {number}"
 
 # SLOTS
 def slots():
