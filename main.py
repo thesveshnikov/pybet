@@ -79,9 +79,6 @@ def print_menu():
         result = switch(option)
         print(result)
 
-# Run the menu
-print_menu()
-
 # RUN THE PROGRAM
 print('<---- Welcome to PyBet ---->')
 print_menu()
