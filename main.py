@@ -33,7 +33,20 @@ def roulette():
 
 # SLOTS
 def slots():
-    return "You chose the Slots."
+    characters = ['7', '@', '$']
+
+    # SELECT CHARACTERS
+    first = random.choice(characters)
+    second = random.choice(characters)
+    third = random.choice(characters)
+
+    print(f"{first} {second} {third}")
+
+    if first == second and first == third:
+        return "YOU WIN!"
+    else:
+        return "YOU LOST!"
+
 
 # RUBBELKARTEN
 def rubbelkarten():
@@ -52,15 +65,22 @@ def switch(option):
 
 # MENU
 def print_menu():
-    print('Choose an option:\n')
+    while True:
+        print('\nChoose an option:')
+        test_list = ['Roulette', 'Slots', 'Rubbelkarten']
+        for x in range(len(test_list)):
+            print(f"{x + 1}. {test_list[x]}")
+        print("0. Exit")
 
-    test_list = ['Roulette', 'Slots', 'Rubbelkarten']
-    for x in range(len(test_list)):
-        print(f"{x + 1}. {test_list[x]}")
+        option = input("\nEnter your choice: ")
+        if option == "0":
+            print("Goodbye!")
+            break
+        result = switch(option)
+        print(result)
 
-    option = input("\nEnter your choice: ")
-    result = switch(option)
-    print(result)
+# Run the menu
+print_menu()
 
 # RUN THE PROGRAM
 print('<---- Welcome to PyBet ---->')
